@@ -32,9 +32,6 @@ function initThemeToggle() {
   if (saved) {
     root.setAttribute("data-theme", saved);
     toggle.setAttribute("aria-pressed", saved === "dark");
-  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    root.setAttribute("data-theme", "dark");
-    toggle.setAttribute("aria-pressed", "true");
   }
 
   toggle.addEventListener("click", () => {
